@@ -1,13 +1,10 @@
-import './App.css';
+import RoustesApp from "./routes";
 
-function App() {
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Mhedica</h1>
-      </header>
-    </div>
+      <div className="app">
+          <RoustesApp/>
+      </div>
   );
 }
-
-export default App;
