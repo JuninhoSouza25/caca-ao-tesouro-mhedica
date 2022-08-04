@@ -3,16 +3,14 @@ import { Link } from "react-router-dom";
 import Errado from "../../components/errado/errado";
 import LogoMhedica from "../../components/logo-mhedica";
 import LogoMhedTech from "../../components/logo-mhedtech/logomhedtech";
-import mapa from "../../assets/img/mapa-3.svg";
-import '../Home/home.css'
+import mapa from "../../assets/img/mapa-5.svg";
 
-
-export default function Pergunta2(){
+export default function Pergunta4(){
     const [pista1, setPista1] = useState('');
     const [certo, setCerto] = useState(false);
     const [errado, setErrado] = useState(false);
     const [form, setForm] = useState(true);
-    const resp1 = "mhed";
+    const resp1 = "canoas";
 
     function handlePista1(e) {
         e.preventDefault()
@@ -30,11 +28,10 @@ export default function Pergunta2(){
             <div className="main animation-slide">
                 <div className="main-content">
                     <LogoMhedica />
-                    <h1>Pista 2</h1>
-                    <h2>Caça ao QR-Code</h2>
+                    <h1>Pista 4</h1>
                     {form && (
                         <form>
-                            <label>Leia o QR-Code para descobrir a senha e use-a para desbloquear a proxima pista!</label>
+                            <label>Posso ser usado para navegar, porém, também dou nome à rua...</label>
                             <input className="input-text" type="text" placeholder="Responda aqui... " name="pista1" value={pista1} onChange={(e)=>setPista1(e.target.value)}></input>
                             <button className="link-button" onClick={handlePista1}>Responder</button>
                         </form>
@@ -44,7 +41,7 @@ export default function Pergunta2(){
                             <h2>Certa resposta!</h2>
                             <img className="img-mapa" src={mapa} alt="mapa"></img>
                             <p>A próxima pista se encontra atrás da porta da sala de vendas.</p>
-                            <Link className="link-button" to="/pergunta-3">Proxima pergunta</Link>
+                            <Link className="link-button" to="/final">Desenterrar o Tesouro</Link>
                         </div>
                         
                     )}

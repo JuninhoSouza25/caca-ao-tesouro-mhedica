@@ -1,43 +1,158 @@
 .home {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     color: black;
-}
-
-.head {
-    background-color: red;
-    width: 100%;
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-image: url(/src/assets/img/Background.svg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .main {
-    background-color: green;
-    width: 100%;
-    height: 40vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 95%;
+    height: 95vh;
+    background-color: bisque;
+    border: 5px solid #8f5008;
+    border-radius: 50px;
+}
+
+.img {
+    width: 150px;
+}
+
+.img-mapa {
+    height: 200px;
+}
+
+.content p {
+    font-size: 12px;
+}
+
+.main-content {
+    height: 95%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.content {
+    text-align: center;
+}
+
+form {
+    flex-wrap: wrap;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: .2s;
+}
+
+label {
+    text-align: center;
+}
+
+.input-text {
+    background-color: transparent;
+    padding: 5px;
+    border: 2px solid #8f5008;
+    border-radius: 25px;
+    text-align: center;
+    width: 400px;
+}
+
+.input-text:focus {
+    border: 2px solid #075697;
 }
 
 .link-button {
-    background-color: #ffffff;
+    border: 2px solid #8f5008;
+    text-decoration: none;
+    color: #8f5008;
+    border-radius: 25px;
+    padding: 15px 25px;
+    background-color: #fcd2a2;
+    transition: .2s;
 }
 
-.footer {
-    background-color: yellow;
-    width: 100%;
-    height: 30vh;
+.link-button:hover {
+    background-color: #8f5008;
+    color: #fcd2a2;
+}
+
+.spam-resp {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-around;
+}
+
+.box-img {
+    background-color: black;
+    width: 300px;
+    height: 300px;
+}
+
+.animation-grow {
+    animation: grow 1.5s;
+}
+
+.animation-slide {
+    animation: slideLeft 1.5s, opacity 1s;
+}
+
+.animation-opacity {
+    animation: opacity 1s;
+}
+
+@keyframes grow{
+    from{
+        transform: scale(.5,.5);
+    }to{
+        transform: scale(1,1);
+    }
+}
+
+@keyframes slideLeft {
+    from{
+        transform: translateX(200px);
+    }to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes opacity{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 420px){
+
+    .input-text {
+        width: 90%;
+    }
+
+    form {
+        width: 100%;
+    }
 }
