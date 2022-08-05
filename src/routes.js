@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Final from './pages/Final';
 
-import Home from './pages/Home'
+import Home from './pages/Home/index'
 import Pergunta1 from './pages/Pergunta1';
 import Pergunta2 from './pages/Pergunta2';
 import Pergunta3 from './pages/Pergunta3';
